@@ -1,0 +1,17 @@
+/target/
+/.idea/
+/.vscode/
+*.user
+*.suo
+.env
+.env.*
+!/.env.example
+/config/local.toml
+/config/tls/
+/secrets/
+*.pem
+*.key
+*.pfx
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,34 @@
+# ==============================================================================
+# RANKS DE COMBATE DE CRIATURAS - AURENFALL
+# ==============================================================================
+# O Rank define a complexidade e o multiplicador de vida/dano de um monstro.
+
+combat_ranks:
+  # Monstro Comum
+  - id: "common"
+    name: "Comum"
+    health_multiplier: 1.0
+    damage_multiplier: 1.0
+    armor_multiplier: 1.0
+    # Monstros comuns não possuem orçamento para traits adicionais
+    trait_budget: 0
+    reward_multiplier: 1.0
+
+  # Monstro Veterano
+  - id: "veteran"
+    name: "Veterano"
+    health_multiplier: 1.5
+    damage_multiplier: 1.15
+    armor_multiplier: 1.10
+    trait_budget: 1
+    reward_multiplier: 1.5
+
+  # Monstro Elite (Mais forte, inteligente e com habilidades especiais)
+  - id: "elite"
+    name: "Elite"
+    health_multiplier: 2.2
+    damage_multiplier: 1.25
+    armor_multiplier: 1.15
+    # Permite combinar traits que somem até 3 pontos de custo (ex: Armored(2) + Frenzied(1))
+    trait_budget: 3
+    reward_multiplier: 2.5

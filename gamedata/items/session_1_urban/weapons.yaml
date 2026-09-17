@@ -1,0 +1,31 @@
+session: 1
+category: "weapons"
+
+items:
+  - id: 1001
+    code_name: "pipe_iron_rusty"
+    base_weight_grams: 1800
+    dimensions:
+      width: 1
+      height: 3
+    max_durability: 120
+    combat:
+      grip: "MeleeOneHand"
+      base_damage: 26.0
+      attack_speed: 1.15
+      range_meters: 1.8
+      stamina_cost: 14.0
+
+  - id: 1002
+    code_name: "pistol_salvaged_9mm"
+    base_weight_grams: 950
+    dimensions:
+      width: 1
+      height: 2
+    max_durability: 200
+    combat:
+      grip: "OneHandedPistol"
+      base_damage: 38.0
+      attack_speed: 2.2
+      range_meters: 25.0
+      stamina_cost: 6.0

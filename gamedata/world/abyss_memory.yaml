@@ -1,0 +1,20 @@
+# ==============================================================================
+# MEMÓRIA DO ABISMO (SISTEMA OCULTO) - AURENFALL
+# ==============================================================================
+# O mundo reage às atitudes do jogador sem exibir notificações na interface.
+
+thresholds:
+  # Pontuação máxima acumulada em qualquer eixo de memória
+  max_score_cap: 1000.0
+  # Decaimento passivo dos pontos por hora jogada (o Abismo 'esquece' aos poucos)
+  passive_decay_per_hour: 25.0
+
+weights:
+  # Pontos de 'Violência' ganhos ao matar criaturas sem necessidade
+  violence_per_kill: 5.0
+  # Pontos de 'Desmatamento/Natureza' ganhos ao derrubar árvores além do consumo
+  nature_deforestation_per_tree: 3.0
+  # Pontos de 'Desperdício' ganhos ao descartar comida ou quebrar recursos sem coletar
+  waste_per_abandoned_resource: 2.0
+  # Pontos de 'Preservação' ganhos ao plantar ou replantar recursos no quadrante
+  preservation_per_action: 4.0

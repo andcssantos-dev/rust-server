@@ -1,0 +1,48 @@
+# ==============================================================================
+# CATÁLOGO DE ESPÉCIES BASE DE CRIATURAS - AURENFALL
+# ==============================================================================
+# A espécie define o corpo biológico e as resistências naturais da criatura.
+
+species:
+  # Espécie: Goblin
+  - id: "species_goblin"
+    name: "Goblin"
+    creature_type: "humanoid"
+    body:
+      base_scale: 0.85
+      scale_variance: 0.08
+    natural_defenses:
+      base_armor: 2.0
+      poison_resistance_pct: 0.10
+      fire_resistance_pct: 0.0
+    locomotion:
+      walk_speed_cm_s: 260.0
+      run_speed_cm_s: 480.0
+    senses:
+      vision_range_meters: 16.0
+      hearing_range_meters: 10.0
+    allowed_archetypes:
+      - "archetype_scavenger"
+      - "archetype_raider"
+      - "archetype_archer"
+
+  # Espécie: Golem de Pedra
+  - id: "species_stone_golem"
+    name: "Golem de Pedra"
+    creature_type: "construct"
+    body:
+      base_scale: 1.40
+      scale_variance: 0.05
+    natural_defenses:
+      base_armor: 15.0
+      poison_resistance_pct: 1.00 # Imune a veneno pois é de pedra
+      fire_resistance_pct: 0.50
+    locomotion:
+      walk_speed_cm_s: 180.0
+      run_speed_cm_s: 300.0
+    senses:
+      vision_range_meters: 12.0
+      hearing_range_meters: 6.0
+    allowed_archetypes:
+      - "archetype_brute"
+      - "archetype_guardian"

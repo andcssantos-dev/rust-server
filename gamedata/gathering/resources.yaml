@@ -1,0 +1,32 @@
+# ==============================================================================
+# TABELA DE RECURSOS COLETÁVEIS - AURENFALL
+# ==============================================================================
+
+resources:
+  # Rocha Básica de Granito Inicial
+  - id: "rock_granite_basic"
+    name: "Rocha de Granito"
+    resource_type_id: 2936143873 # 0xAF020001 em decimal
+    max_health: 20
+    required_tool_type: "PICKAXE"
+    minimum_tool_tier: 1
+    base_xp_reward: 15.0
+    drops:
+      - item_id: "item_stone_chunk"
+        min_quantity: 2
+        max_quantity: 4
+        drop_chance_pct: 1.0
+
+  # Veio de Ferro
+  - id: "ore_iron_deposit"
+    name: "Veio de Ferro"
+    resource_type_id: 2936143874 # 0xAF020002
+    max_health: 50
+    required_tool_type: "PICKAXE"
+    minimum_tool_tier: 2
+    base_xp_reward: 35.0
+    drops:
+      - item_id: "item_iron_ore_raw"
+        min_quantity: 3
+        max_quantity: 6
+        drop_chance_pct: 1.0

@@ -1,0 +1,41 @@
+# ==============================================================================
+# REGRAS DE RESET DE PERSONAGEM - AURENFALL
+# ==============================================================================
+# O reset permite redistribuir a build, adquirir poder acumulado e renovar o ciclo.
+
+general:
+  # Número máximo de resets permitidos por personagem
+  max_resets_allowed: 100
+  # Exigir que todos os equipamentos sejam desequipados antes de autorizar o reset
+  require_unequip_items: true
+  # Se verdadeiro, subatributos (nível de espada, mineração) NÃO são zerados
+  retain_sub_skills: true
+  # Se verdadeiro, quadrantes já descobertos permanecem no mapa do jogador
+  retain_discovered_quadrants: true
+
+# Tabela progressiva de resets: conforme o jogador faz mais resets,
+# o nível necessário aumenta e a recompensa de pontos diminui para manter o desafio.
+tiers:
+  - reset_min: 0
+    reset_max: 10
+    required_level: 100
+    bonus_attribute_points: 50
+    bonus_skill_points: 10
+
+  - reset_min: 11
+    reset_max: 25
+    required_level: 200
+    bonus_attribute_points: 40
+    bonus_skill_points: 8
+
+  - reset_min: 26
+    reset_max: 50
+    required_level: 350
+    bonus_attribute_points: 30
+    bonus_skill_points: 6
+
+  - reset_min: 51
+    reset_max: 100
+    required_level: 500
+    bonus_attribute_points: 20
+    bonus_skill_points: 4

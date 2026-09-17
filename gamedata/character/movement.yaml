@@ -1,0 +1,18 @@
+# ==============================================================================
+# CONFIGURAÇÃO DE FÍSICA E MOVIMENTAÇÃO DETERMINÍSTICA - AURENFALL
+# ==============================================================================
+# Unidade oficial: Milímetros (mm) inteiros
+
+speeds:
+  # 4500 mm/s = 4.5 metros por segundo (velocidade padrão de caminhada)
+  speed_mm_per_second: 4500
+
+  # 7000 mm/s = 7.0 metros por segundo (velocidade ao correr)
+  sprint_speed_mm_per_second: 7000
+
+physics:
+  # Quantidade de ticks sem receber comando até zerar a intenção de movimento
+  input_timeout_ticks: 5
+
+  # Raio de colisão do corpo do personagem em milímetros (25 cm)
+  character_radius_mm: 250

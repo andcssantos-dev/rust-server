@@ -1,0 +1,17 @@
+[package]
+name = "aurenfall-preparation"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+aurenfall-domain = { path = "../domain" }
+thiserror.workspace = true
+tokio.workspace = true
+
+[dev-dependencies]
+aurenfall-core = { path = "../core" }
+
+[lints]
+workspace = true

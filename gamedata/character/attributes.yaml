@@ -1,0 +1,37 @@
+# ==============================================================================
+# ESCALONAMENTO DE ATRIBUTOS BÁSICOS - AURENFALL
+# ==============================================================================
+# Atributos básicos progridem de forma lenta e linear.
+# Eles definem o potencial do corpo do personagem e servem de pré-requisito para itens.
+
+strength:
+  # Dano físico mínimo adicionado por ponto de Força
+  attack_power_min_per_point: 1.0
+  # Dano físico máximo adicionado por ponto de Força
+  attack_power_max_per_point: 2.0
+  # Capacidade de carga extra (em quilos) suportada no inventário por ponto de Força
+  carry_weight_bonus_kg: 2.5
+
+defense:
+  # Porcentagem de redução de dano direto absorvida por ponto (ex: 0.002 = 0.2%)
+  damage_reduction_pct_per_point: 0.002
+  # Valor bruto de armadura fixa adicionado por ponto
+  flat_armor_per_point: 1.0
+
+agility:
+  # Velocidade de caminhada/corrida adicional (em cm/s) por ponto de Agilidade
+  move_speed_bonus_per_point: 1.5
+  # Redução percentual do tempo de animação de ataques por ponto (0.005 = 0.5%)
+  attack_speed_bonus_pct: 0.005
+
+vitality:
+  # Quantidade de Pontos de Vida (HP) adicionados por ponto de Vitalidade
+  health_points_per_point: 10.0
+  # Regeneração passiva de vida por segundo fora de combate por ponto
+  health_regen_per_second: 0.1
+
+intelligence:
+  # Quantidade de Energia/Mana adicionada por ponto de Inteligência
+  energy_points_per_point: 8.0
+  # Aceleração percentual de recuperação de energia por ponto (0.01 = 1.0%)
+  energy_regen_bonus_pct: 0.01

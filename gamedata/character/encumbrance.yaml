@@ -1,0 +1,30 @@
+# ==============================================================================
+# REGRAS DE PESO E SOBRECARGA - AURENFALL
+# ==============================================================================
+# Controla as penalidades de velocidade conforme a mochila enche de itens.
+
+base_capacity:
+  # Capacidade padrão de carga de um aventureiro sem bônus (em kg)
+  starting_max_weight_kg: 50.0
+
+  # Capacidade extra adicionada para cada ponto no atributo Força
+  bonus_weight_per_strength_point: 2.5
+
+thresholds:
+  # Nível 1: Carga Média (ao atingir 60% do peso máximo)
+  # O jogador corre a 90% da velocidade normal
+  - trigger_percentage: 0.60
+    speed_multiplier: 0.90
+    stamina_drain_multiplier: 1.10
+
+  # Nível 2: Carga Pesada (ao atingir 85% do peso)
+  # Velocidade cai para 70% e cansa mais rápido
+  - trigger_percentage: 0.85
+    speed_multiplier: 0.70
+    stamina_drain_multiplier: 1.25
+
+  # Nível 3: Sobrecarga Crítica (100% ou mais do peso limite)
+  # O personagem apenas caminha a passos lentos (30% da velocidade)
+  - trigger_percentage: 1.00
+    speed_multiplier: 0.30
+    stamina_drain_multiplier: 2.00

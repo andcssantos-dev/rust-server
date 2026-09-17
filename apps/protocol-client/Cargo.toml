@@ -1,0 +1,20 @@
+[package]
+name = "aurenfall-protocol-client"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+aurenfall-contracts = { path = "../../crates/contracts" }
+aurenfall-observability = { path = "../../crates/observability" }
+aurenfall-transport = { path = "../../crates/transport" }
+getrandom.workspace = true
+quinn.workspace = true
+rustls.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+
+[lints]
+workspace = true

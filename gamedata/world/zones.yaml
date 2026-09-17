@@ -1,0 +1,41 @@
+# ==============================================================================
+# ZONEAMENTO DO UNIVERSO - AURENFALL
+# ==============================================================================
+# Organização das áreas do universo de 9 bilhões de km² em densidades diferentes.
+
+zones:
+  # Zona Solitária: Para jogadores que buscam sobrevivência pura sem encontrar ninguém
+  - zone_id: "ZONE_SOLITARY"
+    description: "Zona remota e dispersa para gameplay single-player ou coop isolado"
+    size_km_squared: 5000000000
+    spawn_distance_multiplier: 100.0
+    pvp_enabled: false
+    can_claim_territory: true
+    can_invade_territory: false
+
+  # Zona PvE: Alta cooperação, jogadores começam mais próximos uns dos outros
+  - zone_id: "ZONE_PVE_DENSE"
+    description: "Área cooperativa de 2 bilhões de km² com alta densidade de quadrantes"
+    size_km_squared: 2000000000
+    spawn_distance_multiplier: 1.0
+    pvp_enabled: false
+    can_claim_territory: true
+    can_invade_territory: false
+
+  # Zona PvP Vermelha: Conflito total e conquista territorial de quadrantes
+  - zone_id: "ZONE_PVP_RED"
+    description: "Área hostil de 2 bilhões de km² com guerra de territórios e clãs"
+    size_km_squared: 2000000000
+    spawn_distance_multiplier: 0.5
+    pvp_enabled: true
+    can_claim_territory: true
+    can_invade_territory: true
+
+  # Zona Cinza: O grande entreposto neutro de comércio e missões
+  - zone_id: "ZONE_GRAY_HUB"
+    description: "Ponto de encontro universal de todos os sobreviventes do Abismo"
+    size_km_squared: 1000000
+    spawn_distance_multiplier: 0.0
+    pvp_enabled: false
+    can_claim_territory: false
+    can_invade_territory: false

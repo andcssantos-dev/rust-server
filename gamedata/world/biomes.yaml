@@ -1,0 +1,51 @@
+# ==============================================================================
+# CONFIGURAÇÃO DE BIOMAS E ECOLOGIA - AURENFALL
+# ==============================================================================
+# Define as regras ambientais, recursos, spawns de mobs e modificadores de cada bioma.
+
+biomes:
+  temperate_forest:
+    biome_id: "temperate_forest"
+    numeric_id: 1
+    display_name: "Floresta Temperada"
+    description: "Uma região densa de árvores antigas, rica em madeira e vida selvagem moderada."
+    allowed_terrains: ["grass", "dirt", "shallow_water"]
+    structural_features: ["trees", "bushes", "rivers", "small_ruins"]
+    base_temperature: 21.0
+    weather_types: ["clear", "rain", "fog"]
+    ambient_sounds: ["wind_rustle_leaves", "bird_calls_morning"]
+    environmental_modifiers:
+      - effect_id: "fresh_air"
+        interval_seconds: 30
+        attribute_impact: "energy"
+        value_change: 1
+    possible_mobs:
+      - mob_id: "wild_boar"
+        weight: 60
+        min_level: 1
+        max_level: 5
+        active_time_range: [6, 18]
+        quadrant_density_cap: 5
+
+  wasteland_industrial:
+    biome_id: "wasteland_industrial"
+    numeric_id: 2
+    display_name: "Zona Industrial Abandonada"
+    description: "Ruínas de concreto e metal onde o ar é pesado e os perigos são constantes."
+    allowed_terrains: ["asphalt", "concrete", "dirt"]
+    structural_features: ["roads", "ruins", "bunkers"]
+    base_temperature: 15.0
+    weather_types: ["acid_fog", "clear", "dust_storm"]
+    ambient_sounds: ["metal_creaking", "distant_wind"]
+    environmental_modifiers:
+      - effect_id: "heavy_air"
+        interval_seconds: 60
+        attribute_impact: "energy"
+        value_change: -2
+    possible_mobs:
+      - mob_id: "mutated_scavenger"
+        weight: 80
+        min_level: 5
+        max_level: 15
+        active_time_range: [0, 24]
+        quadrant_density_cap: 8

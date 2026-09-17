@@ -1,0 +1,46 @@
+# ==============================================================================
+# SUBATRIBUTOS E PROGRESSÃO POR REPETIÇÃO - AURENFALL
+# ==============================================================================
+# Ao contrário dos atributos básicos (Força, Defesa, etc.), os subatributos
+# aumentam conforme o jogador executa ações válidas no mundo.
+
+validation_rules:
+  # Se o jogador atacar o ar vazio sem atingir nenhum alvo, ganha XP?
+  # false = Impede jogadores de deixarem macros atacando o vento.
+  allow_miss_action_xp: false
+
+  # Se o jogador atacar um companheiro de grupo ou recurso esgotado, ganha XP?
+  allow_invalid_target_xp: false
+
+  # Intervalo mínimo em milissegundos entre duas ações válidas para contar XP.
+  # Impede exploits de velocidade alterada no cliente (speedhack de animação).
+  min_action_interval_ms: 400
+
+sub_skills:
+  # Categoria: Manejo de Armas Brancas
+  blade_mastery:
+    max_level: 100
+    base_xp_required: 100.0
+    xp_scaling_factor: 1.15
+    xp_per_valid_hit: 10.0
+
+  # Categoria: Armas de Fogo e Balística
+  firearms_handling:
+    max_level: 100
+    base_xp_required: 120.0
+    xp_scaling_factor: 1.18
+    xp_per_valid_hit: 8.0
+
+  # Categoria: Mineração e Extração Geológica
+  mining:
+    max_level: 100
+    base_xp_required: 80.0
+    xp_scaling_factor: 1.12
+    xp_per_valid_hit: 12.0
+
+  # Categoria: Extração Florestal (Madeira)
+  woodcutting:
+    max_level: 100
+    base_xp_required: 80.0
+    xp_scaling_factor: 1.12
+    xp_per_valid_hit: 12.0

@@ -1,0 +1,16 @@
+namespace Aurenfall.Protocol.World;
+
+struct SectorCoord {
+  x:long;
+  y:long;
+}
+
+table SectorManifest {
+  x:long;
+  y:long;
+  generator_version:uint;
+  generation_seed:[ubyte];
+  revision:ulong;
+}
+
+root_type SectorManifest;

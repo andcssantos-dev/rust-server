@@ -1,0 +1,64 @@
+[server]
+environment = "development"
+instance_name = "local-windows"
+
+[universe]
+id = 1
+seed = "aurenfall-genesis-development"
+generator_version = 1
+quadrant_size_mm = 64000
+
+[universe.initial_frontier]
+min_x = -1
+min_y = -1
+width = 4
+height = 4
+
+[simulation]
+tick_rate_hz = 20
+zone_command_capacity = 4096
+movement_snapshot_capacity = 4096
+sector_size_meters = 256
+correction_absorb_max_mm = 25
+correction_smooth_max_mm = 250
+correction_hard_snap_threshold_mm = 1000
+correction_smooth_duration_ms = 120
+correction_rapid_duration_ms = 50
+
+[preparation]
+request_queue_capacity = 64
+result_queue_capacity = 64
+max_in_flight = 2
+scheduler_interval_ms = 100
+max_submissions_per_tick = 1
+max_prepared_quadrants = 1
+retry_backoff_ms = 500
+max_retry_attempts = 3
+
+[network]
+bind_address = "0.0.0.0:7777"
+certificate_der_path = "config/tls/dev-cert.der"
+private_key_der_path = "config/tls/dev-key.der"
+max_connections = 1024
+session_event_capacity = 4096
+frontier_ack_retry_interval_ms = 500
+frontier_ack_timeout_ms = 5000
+frontier_ack_max_retries = 3
+max_datagram_bytes = 1200
+max_control_frame_bytes = 4096
+max_bidi_streams = 8
+max_uni_streams = 8
+handshake_timeout_ms = 5000
+rejection_close_grace_ms = 2000
+idle_timeout_ms = 60000
+datagram_receive_buffer_bytes = 262144
+datagram_send_buffer_bytes = 262144
+minimum_client_build = 3
+
+[persistence]
+enabled = true
+connection_string = "postgres://postgres:6141@localhost:5433/aurenfall_dev"
+
+[cache]
+character_capacity = 2048
+gamedata_versions = 4

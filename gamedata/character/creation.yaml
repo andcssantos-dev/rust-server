@@ -1,0 +1,21 @@
+# ==============================================================================
+# CONFIGURAÇÃO DE CRIAÇÃO DE PERSONAGEM - AURENFALL
+# ==============================================================================
+# Este arquivo dita os limites que o jogador possui ao criar um novo aventureiro.
+# Qualquer alteração aqui é lida pelo servidor sem necessidade de recompilar.
+
+# Quantidade total de pontos livres que o jogador recebe para distribuir
+# entre os 5 atributos básicos (Força, Defesa, Agilidade, Vitalidade, Inteligência).
+starting_attribute_points: 15
+
+# Quantidade exata de qualidades positivas que o jogador DEVE escolher.
+max_qualities_allowed: 3
+
+# Quantidade exata de defeitos negativos que o jogador DEVE escolher.
+max_defects_allowed: 3
+
+# Valor mínimo que qualquer atributo básico pode ter na criação.
+base_attribute_minimum: 1
+
+# Valor máximo que um atributo básico pode atingir somente com pontos de criação.
+base_attribute_maximum: 10

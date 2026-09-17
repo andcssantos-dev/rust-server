@@ -1,0 +1,15 @@
+namespace Aurenfall.Protocol;
+
+enum DeliveryClass : byte { ReliableOrdered = 0, UnreliableLatest = 1 }
+
+table Envelope {
+  protocol_major:ushort;
+  protocol_minor:ushort;
+  message_kind:ushort;
+  sequence:ulong;
+  server_tick:ulong;
+  payload:[ubyte];
+}
+
+root_type Envelope;
+file_identifier "AURE";
